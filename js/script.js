@@ -209,4 +209,17 @@ if (document.querySelector('.mainslider')) {
   }
 }
 
+let productsSlider = new Swiper(".products-slider", {
+  slidesPerView: 1,
+  speed: 800,
 
+  navigation: {
+    nextEl: ".products-slider__arrow_next",
+    prevEl: ".products-slider__arrow_prev",
+  },
+
+  pagination: {
+    el: ".products-slider__info",
+    type: "fraction"
+  },
+})
