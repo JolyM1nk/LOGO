@@ -209,7 +209,9 @@ if (document.querySelector('.mainslider')) {
   }
 }
 
-let productsSlider = new Swiper(".products-slider", {
+
+if (document.querySelector('.products-slider')) {
+  let productsSlider = new Swiper(".products-slider", {
   slidesPerView: 1,
   speed: 800,
 
@@ -223,3 +225,42 @@ let productsSlider = new Swiper(".products-slider", {
     type: "fraction"
   },
 })
+}
+
+if (document.querySelector('.partners-slider__wrapper')) {
+  let partnersSlider = new Swiper(".partners-slider__wrapper", {
+  slidesPerView: 5,
+  speed: 1000,
+  loop: true,
+
+  breakpoints: {
+    
+    320: {
+      slidesPerView: 1,
+    },
+
+    425: {
+      slidesPerView: 2,
+    },
+
+    640: {
+      slidesPerView: 3,
+    },
+
+    820: {
+      slidesPerView: 4,
+    },
+
+    992: {
+      slidesPerView: 5,
+    },
+  },
+
+  navigation: {
+    nextEl: ".partners-slider__arrow_next",
+    prevEl: ".partners-slider__arrow_prev",
+  },
+})
+}
+
+
