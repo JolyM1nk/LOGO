@@ -230,7 +230,7 @@ if (document.querySelector('.products-slider')) {
 if (document.querySelector('.partners-slider__wrapper')) {
   let partnersSlider = new Swiper(".partners-slider__wrapper", {
   slidesPerView: 5,
-  speed: 1000,
+  speed: 600,
   loop: true,
 
   breakpoints: {
