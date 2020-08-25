@@ -2948,29 +2948,26 @@ if (document.getElementById('price-filter__slider')) {
       'max': 200000
     }
   });
-}
 
-if (document.getElementById('price-filter__slider')) {
   const start = document.getElementById('price-start');
   const end = document.getElementById('price-end');
 
   start.addEventListener('change', setPriceValues)
   end.addEventListener('change', setPriceValues)
-}
 
+  function setPriceValues() {
+    let priceStartValue;
+    let priceEndValue;
 
-function setPriceValues() {
-  let priceStartValue;
-  let priceEndValue;
+    if (start.value != '') {
+      priceStartValue = start.value;
+    }
+    if (end.value != '') {
+      priceEndValue = end.value;
+    }
 
-  if (start.value != '') {
-    priceStartValue = start.value;
+    priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
   }
-  if (end.value != '') {
-    priceEndValue = end.value;
-  }
-
-  priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 }
 
 let removes = document.querySelectorAll(".compare-filter__remove")
