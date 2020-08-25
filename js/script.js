@@ -2992,8 +2992,6 @@ if (document.querySelector('.compare-filter__clean')) {
     compareFilterItems.style = "display: none";
   })
 }
-  
-
 
 if (document.querySelector('._spoller')) {
   let spollers = document.querySelectorAll('._spoller');
@@ -3097,6 +3095,43 @@ if (document.querySelector('.info-product__item')) {
 
       tab.classList.add('_active');
       block.classList.add('_active');
+    })
+  }
+}
+
+if (document.querySelector('.cart__item')) {
+  let tabs = document.querySelectorAll('.cart__item');
+  let blocks = document.querySelectorAll('.cart__block');
+
+  for (let i = 0; i < tabs.length; i++) {
+    let tab = tabs[i];
+    let block = blocks[i];
+
+    tab.addEventListener('click', function (e) {
+      for (let j = 0; j < tabs.length; j++) {
+        let t = tabs[j];
+        let b = blocks[j];
+
+        t.classList.remove('_active')
+        b.classList.remove('_active')
+      }
+
+      tab.classList.add('_active');
+      block.classList.add('_active');
+    })
+  }
+}
+
+if (document.querySelector(".item-order__delete")) {
+  let deletes = document.querySelectorAll('.item-order__delete');
+  let deleteItems = document.querySelectorAll('.item-order');
+
+  for (let i = 0; i < deleteItems.length; i++) {
+    const delet = deletes[i];
+    const deleteItem = deleteItems[i];
+
+    delet.addEventListener('click', function () {
+      deleteItem.style = "display: none";
     })
   }
 }
